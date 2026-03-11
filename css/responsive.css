@@ -247,7 +247,7 @@
         margin: 0;
         text-align: left;
     }
-    #navbar_menu.small-screen #menu-button {
+    #navbar_menu.small-screen #menu_button {
         display: block;
         padding: 0;
         color: #fff;
@@ -263,7 +263,7 @@
         top: -67px;
         left: 20px;
     }
-    #navbar_menu.small-screen #menu-button::after {
+    #navbar_menu.small-screen #menu_button::after {
         position: absolute;
         top: 12px;
         right: 8px;
@@ -274,7 +274,7 @@
         border-bottom: 3px solid #000;
         content: '';
     }
-    #navbar_menu.small-screen #menu-button::before {
+    #navbar_menu.small-screen #menu_button::before {
         position: absolute;
         top: 17px;
         right: 8px;
@@ -284,7 +284,7 @@
         background: #000;
         content: '';
     }
-    #navbar_menu.small-screen #menu-button.menu-opened::after {
+    #navbar_menu.small-screen #menu_button.menu-opened::after {
         top: 16px;
         border: 0;
         height: 3px;
@@ -297,7 +297,7 @@
         transform: rotate(45deg);
         left: 10px;
     }
-    #navbar_menu.small-screen #menu-button.menu-opened::before {
+    #navbar_menu.small-screen #menu_button.menu-opened::before {
         top: 16px;
         background: #000;
         width: 16px;
@@ -446,10 +446,10 @@
         font-size: 50px;
     }
     /**== menu == **/
-    #navbar_menu.small-screen #menu-button {
+    #navbar_menu.small-screen #menu_button {
         top: -74px;
     }
-    .home_page_2 #navbar_menu.small-screen #menu-button {
+    .home_page_2 #navbar_menu.small-screen #menu_button {
         top: 15px;
     }
     .header_bottom .information_bottom {
@@ -643,28 +643,28 @@
         padding-left: 0;
     }
     /** white_responsive_menu **/
-    .header_style_2 #navbar_menu.small-screen #menu-button,
-    .header_style_3 #navbar_menu.small-screen #menu-button,
-    .header_style_2 #navbar_menu.small-screen #menu-button::after,
-    .header_style_3 #navbar_menu.small-screen #menu-button::after {
+    .header_style_2 #navbar_menu.small-screen #menu_button,
+    .header_style_3 #navbar_menu.small-screen #menu_button,
+    .header_style_2 #navbar_menu.small-screen #menu_button::after,
+    .header_style_3 #navbar_menu.small-screen #menu_button::after {
         border-color: #fff;
     }
-    .header_style_3 #navbar_menu.small-screen #menu-button::before,
-    .header_style_2 #navbar_menu.small-screen #menu-button::before,
-    .header_style_3 #navbar_menu.small-screen #menu-button.menu-opened::before,
-    .header_style_2 #navbar_menu.small-screen #menu-button.menu-opened::before,
-    .header_style_3 #navbar_menu.small-screen #menu-button.menu-opened::after,
-    .header_style_2 #navbar_menu.small-screen #menu-button.menu-opened::after {
+    .header_style_3 #navbar_menu.small-screen #menu_button::before,
+    .header_style_2 #navbar_menu.small-screen #menu_button::before,
+    .header_style_3 #navbar_menu.small-screen #menu_button.menu-opened::before,
+    .header_style_2 #navbar_menu.small-screen #menu_button.menu-opened::before,
+    .header_style_3 #navbar_menu.small-screen #menu_button.menu-opened::after,
+    .header_style_2 #navbar_menu.small-screen #menu_button.menu-opened::after {
         background: #fff;
     }
     /** gream_color **/
-    body.home_page_5 #navbar_menu.small-screen #menu-button,
-    body.home_page_5 #navbar_menu.small-screen #menu-button::after {
+    body.home_page_5 #navbar_menu.small-screen #menu_button,
+    body.home_page_5 #navbar_menu.small-screen #menu_button::after {
         border-color: #e9dcbe;
     }
-    body.home_page_5 #navbar_menu.small-screen #menu-button::before,
-    body.home_page_5 #navbar_menu.small-screen #menu-button.menu-opened::before,
-    body.home_page_5 #navbar_menu.small-screen #menu-button.menu-opened::after {
+    body.home_page_5 #navbar_menu.small-screen #menu_button::before,
+    body.home_page_5 #navbar_menu.small-screen #menu_button.menu-opened::before,
+    body.home_page_5 #navbar_menu.small-screen #menu_button.menu-opened::after {
         background: #e9dcbe;
     }
     .header_style_4 .header_bottom {
@@ -1103,7 +1103,7 @@
     .header_style_4 .header_bottom {
         padding: 0;
     }
-    .header_style_4 #navbar_menu.small-screen #menu-button {
+    .header_style_4 #navbar_menu.small-screen #menu_button {
         left: 30px;
     }
     .header_style_4 .search_icon {
@@ -1111,13 +1111,13 @@
         top: -67px;
     }
     /** white_responsive_menu **/
-    .header_style_3 #navbar_menu.small-screen #menu-button,
-    .header_style_3 #navbar_menu.small-screen #menu-button::after {
+    .header_style_3 #navbar_menu.small-screen #menu_button,
+    .header_style_3 #navbar_menu.small-screen #menu_button::after {
         border-color: #fff;
     }
-    .header_style_3 #navbar_menu.small-screen #menu-button::before,
-    .header_style_3 #navbar_menu.small-screen #menu-button.menu-opened::before,
-    .header_style_3 #navbar_menu.small-screen #menu-button.menu-opened::after {
+    .header_style_3 #navbar_menu.small-screen #menu_button::before,
+    .header_style_3 #navbar_menu.small-screen #menu_button.menu-opened::before,
+    .header_style_3 #navbar_menu.small-screen #menu_button.menu-opened::after {
         background: #fff;
     }
     .home_page_4 #full_slider.full_slider_inner {
@@ -1500,7 +1500,7 @@
     .header_top .social_icon ul li {
         margin-right: 10px;
     }
-    #navbar_menu.small-screen #menu-button {
+    #navbar_menu.small-screen #menu_button {
         top: -80px;
     }
     .search_icon {
@@ -1634,7 +1634,7 @@
     .logo img {
         height: auto;
     }
-    #navbar_menu.small-screen #menu-button {
+    #navbar_menu.small-screen #menu_button {
         top: -71px;
     }
     #search_bar .search-global {

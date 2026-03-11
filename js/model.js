@@ -2,15 +2,18 @@ var menu_box = document.querySelector("#menu_box");
 menu_box.innerHTML = `
 <!-- menu start -->
 <div class="menu_side">
-	<div id="navbar_menu">
-		<ul class="first-ul">
+	<div id="navbar_menu" class="">
+		<div id="menu_button">Menu</div>
+		<ul id="navbar_ul" class="first-ul">
 			<li class="lis" name="index"><a href="index.html">Home</a></li>
 			<li class="lis" name="about"><a href="it_about.html">About Us</a></li>
 			<li class="lis" name="service">
+				<span class="submenu-button"></span>
 				<a href="#">Services</a>
 				<ul><li><a href="it_service_plan.html">System Integration</a></ul>
 			</li>
 			<li class="lis" name="solution">
+				<span class="submenu-button"></span>
 				<a href="#">Solutions</a>
 				<ul>
 					<li><a href="it_network_solution.html">Network Solutions</a></li>
@@ -34,13 +37,12 @@ menu_box.innerHTML = `
 <!-- menu end -->`;
 const aaa = location.href.split('/')
 
-var navbar_menu = document.querySelectorAll("#navbar_menu .lis");
-navbar_menu.forEach(item => {
+var navbar_ul = document.querySelectorAll("#navbar_ul .lis");
+navbar_ul.forEach(item => {
 	if (aaa[aaa.length - 1].indexOf(item.getAttribute("name")) !== -1) {
-		// console.log(navbar_menu);
-		document.querySelector('[name="'+item.getAttribute("name")+'"]').classList.add('active');
+		document.querySelector('[name="' + item.getAttribute("name") + '"]').classList.add('active');
 		return true;
-	}else if(aaa[aaa.length - 1]==""){
+	} else if (aaa[aaa.length - 1] == "") {
 		document.querySelector('[name="index"]').classList.add('active');
 	}
 	return false;
@@ -115,3 +117,37 @@ footer_box.innerHTML = `
 			</div>
 		</div>
 `;
+
+
+
+
+var navbar_menu = document.querySelector("#navbar_menu");
+if (window.innerWidth <= 1007) {
+	navbar_menu.classList.add("small-screen");
+} else {
+	navbar_menu.classList.remove("small-screen");
+}
+window.addEventListener("resize", function () {
+	console.log("螢幕寬度:", window.innerWidth);
+	if (window.innerWidth <= 1007) {
+		navbar_menu.classList.add("small-screen");
+	} else {
+		navbar_menu.classList.remove("small-screen");
+	}
+})
+var menu_button = document.querySelector("#menu_button")
+var first_ul = document.querySelector(".first-ul");
+navbar_menu.onclick = function (params) {
+	navbar_menu.classList.toggle("menu-opened");
+	first_ul.classList.toggle("open");
+}
+var submenu_button = document.querySelectorAll(".submenu-button");
+
+for (let i = 0; i < submenu_button.length; i++) {
+	const element = submenu_button[i];
+	element.onclick = function (e) {
+		e.stopPropagation();
+		element.classList.toggle("submenu-opened");
+		element.parentNode.classList.toggle("show_ul")
+	}
+}

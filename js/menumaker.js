@@ -17,8 +17,8 @@
         return this.each(function() {
             cssmenu.find('li ul').parent().addClass('has-sub');
             if (settings.format != 'select') {
-                cssmenu.prepend('<div id="menu-button">' + settings.title + '</div>');
-                $(this).find("#menu-button").on('click', function() {
+                cssmenu.prepend('<div id="menu_button">' + settings.title + '</div>');
+                $(this).find("#menu_button").on('click', function() {
                     $(this).toggleClass('menu-opened');
                     var mainmenu = $(this).next('ul');
                     if (mainmenu.hasClass('open')) {
@@ -74,7 +74,7 @@
                     if (settings.format === 'select') {
                         cssmenu.find('select').hide();
                     } else {
-                        cssmenu.find("#menu-button").removeClass("menu-opened");
+                        cssmenu.find("#menu_button").removeClass("menu-opened");
                     }
                 }
 

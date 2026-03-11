@@ -592,6 +592,7 @@ a:focus {
         -o-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     to {
         -webkit-transform: rotate(360deg);
         -moz-transform: rotate(360deg);
@@ -605,6 +606,7 @@ a:focus {
     from {
         -moz-transform: rotate(0deg);
     }
+
     to {
         -moz-transform: rotate(360deg);
     }
@@ -832,6 +834,7 @@ hr.dottad_border {
         -o-transform: rotatey(0deg);
         transform: rotatey(0deg);
     }
+
     to {
         -webkit-transform: rotatey(360deg);
         -moz-transform: rotatey(360deg);
@@ -845,6 +848,7 @@ hr.dottad_border {
     from {
         -moz-transform: rotatey(0deg);
     }
+
     to {
         -moz-transform: rotatey(360deg);
     }
@@ -1008,7 +1012,7 @@ header .right_bt .btn {
 #navbar_menu ul,
 #navbar_menu ul li,
 #navbar_menu ul li a,
-#navbar_menu #menu-button {
+#navbar_menu #menu_button {
     margin: 0;
     padding: 0;
     border: 0;
@@ -1023,7 +1027,7 @@ header .right_bt .btn {
 #navbar_menu ul,
 #navbar_menu ul li,
 #navbar_menu ul li a,
-#navbar_menu #menu-button {
+#navbar_menu #menu_button {
     position: relative;
 }
 
@@ -1037,7 +1041,7 @@ header .right_bt .btn {
     height: 0;
 }
 
-#navbar_menu #menu-button {
+#navbar_menu #menu_button {
     display: none;
 }
 
@@ -3973,9 +3977,9 @@ footer ul.social_icons {
     border-radius: 0;
 }
 
-.product_detail .tab_bar_section ul.nav.nav-tabs li a.active ,
+.product_detail .tab_bar_section ul.nav.nav-tabs li a.active,
 .product_detail .tab_bar_section ul.nav.nav-tabs li.active a,
-#navbar_menu>ul>li.active>a{
+#navbar_menu>ul>li.active>a {
     background: #E76C24;
     color: #fff;
 }
@@ -4763,4 +4767,9 @@ footer ul.social_icons {
 
 .product_detail_side.detail_style1 {
     margin-top: 35px;
+}
+
+.first-ul.open ,
+.show_ul ul{
+    display: block !important;
 }
