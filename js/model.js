@@ -36,13 +36,15 @@ const aaa = location.href.split('/')
 
 var navbar_menu = document.querySelectorAll("#navbar_menu .lis");
 navbar_menu.forEach(item => {
+	console.log(aaa);
 	if (aaa[aaa.length - 1].indexOf(item.getAttribute("name")) !== -1) {
 		// console.log(navbar_menu);
 		document.querySelector('[name="'+item.getAttribute("name")+'"]').classList.add('active');
 		return true;
+	}else if(aaa[aaa.length - 1]==""){
+		document.querySelector('[name="index"]').classList.add('active');
 	}
 	return false;
-	console.log(aaa[aaa.length - 1].indexOf(item.getAttribute("name")));
 });
 
 
