@@ -145,6 +145,9 @@ var submenu_button = document.querySelectorAll(".submenu-button");
 
 for (let i = 0; i < submenu_button.length; i++) {
 	const element = submenu_button[i];
+	element.parentNode.onclick= function (e) {
+		e.stopPropagation();
+	}
 	element.onclick = function (e) {
 		e.stopPropagation();
 		element.classList.toggle("submenu-opened");
