@@ -771,6 +771,7 @@ hr.dottad_border {
 	margin: 20px auto 0;
 	width: 80px;
 	height: 5px;
+	background: #E76C24;
 }
 
 .main_heading.text_align_left::after {
