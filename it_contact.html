@@ -132,70 +132,62 @@
 							</div>
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contant_form">
 								<div class="form_section">
-									<form class="form_contant" action="https://ito.com.my/ccontact.php" method="post">
-										<fieldset>
-											<div class="row">
-												<div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-													<input class="field_custom" placeholder="Your Name *" type="text"
-														name="gform_name">
-												</div>
-												<div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-													<input class="field_custom" placeholder="Email Address *"
-														type="email" name="gform_email">
-												</div>
-												<div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-													<input class="field_custom" placeholder="Contact Number *"
-														type="text" name="gform_contact">
-												</div>
-												<div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-													<input class="field_custom" placeholder="Company Name" type="text"
-														name="gform_company">
-												</div>
-												<div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-													<input class="field_custom" placeholder="Town and City *"
-														type="text" name="gform_city">
-												</div>
-												<div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-													<input class="field_custom" placeholder="Company Website"
-														type="text" name="gform_url">
-												</div>
-												<div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-													<input class="field_custom" placeholder="Subject *" list="subjects"
-														type="text" name="gform_subject">
-													<datalist id="subjects">
-														<option value="Enquiry for Services & Solutions">
-														<option value="General Enquiries">
-														<option value="Need Urgent Support!">
-														<option value="Job Application">
-														<option value="Feedback on Webpage">
-													</datalist>
-												</div>
-												<div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-													<textarea class="field_custom" placeholder="Messages *"
-														name="gform_message"></textarea>
-												</div>
-												<div class="center field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-													<p align="center" id="captcha_js_message">
-														Error: please enable JavaScript and reload this page before
-														using the form.</p>
-													<script type="text/javascript">
-														var captcha_js_message_block;
-														captcha_js_message_block = document.getElementById('captcha_js_message');
-														captcha_js_message_block.parentNode.removeChild(captcha_js_message_block);
-													</script>
-													<div class="g-recaptcha"
-														data-sitekey="6Ld6WNISAAAAALAGXoLWJg7Znl0YVou6pyqd4jYs"></div>
-													<script type="text/javascript"
-														src="https://www.google.com/recaptcha/api.js?hl=en"
-														async="async" defer="defer"></script>
-												</div>
-												<div class="center">
-													<p><br><input type="submit" value="  SUBMIT NOW  " /></p>
-												</div>
-												<center>
+									<form class="form_contant" id="contactForm">
+										<div class="row">
+											<div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+												<input class="field_custom" placeholder="Your Name *" type="text"
+													name="name" required>
 											</div>
-										</fieldset>
+											<div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+												<input class="field_custom" placeholder="Email Address *"
+													type="email" name="email" required>
+											</div>
+											<div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+												<input class="field_custom" placeholder="Contact Number *"
+													type="text" name="contact" required>
+											</div>
+											<div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+												<input class="field_custom" placeholder="Company Name" type="text"
+													name="company" required>
+											</div>
+											<div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+												<input class="field_custom" placeholder="Town and City *"
+													type="text" name="city" required>
+											</div>
+											<div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
+												<input class="field_custom" placeholder="Company Website"
+													type="text" name="website">
+											</div>
+											<div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
+												<input class="field_custom" placeholder="Subject *" list="subjects"
+													type="text" name="subject" required>
+												<datalist id="subjects">
+													<option value="Enquiry for Services & Solutions">
+													<option value="General Enquiries">
+													<option value="Need Urgent Support!">
+													<option value="Job Application">
+													<option value="Feedback on Webpage">
+												</datalist>
+											</div>
+											<div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
+												<textarea class="field_custom" placeholder="Messages *"
+													name="message" required></textarea>
+											</div>
+											<div class="center">
+												<p><br><input type="submit" value="  SUBMIT NOW  " /></p>
+											</div>
+										</div>
 									</form>
+									<script>
+										const form = document.querySelector('#contactForm');
+										form.addEventListener('submit', async function(e) {
+											e.preventDefault(); // 阻止跳轉
+											const formData = new FormData(form);
+											fetch('../send.php', {method: 'POST',body: formData});
+											form.reset();
+											location.href = "/it_contact_thankyou.html";
+										});
+									</script>
 								</div>
 							</div>
 						</div>
