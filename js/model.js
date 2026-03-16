@@ -59,7 +59,8 @@ footer_box.innerHTML = `
 						<div class="col-md-3 col-sm-6">
 							<div class="main-heading left_text">
 								<h2>ACHIEVER GAIN INTERNATIONAL LIMITED</h2>
-								<p>No. 501, Sec. 6, Nanjing E. Rd., Neihu Dist., Taipei City 114057, Taiwan (R.O.C.)</p>
+								<a style='color:#888' href="mailto:service@achiever6261.com" class="email-link">service@achiever6261.com</a>
+								<p style='margin-top:10px'>No. 501, Sec. 6, Nanjing E. Rd., Neihu Dist., Taipei City 114057, Taiwan (R.O.C.)</p>
 							</div>
 							
 							<ul class="social_icons">
